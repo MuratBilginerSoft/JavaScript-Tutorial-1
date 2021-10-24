@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+
+    <style>
+            .kutu {
+                width: 120px;
+                height: 120px;
+                margin: 10px;
+                float: left;
+            }
+    
+            #mavi {
+                background-color: blue;
+            }
+    
+            #kirmizi {
+                background-color: red;
+            }
+    
+            #sari {
+                background-color: yellow;
+            }
+    
+        </style>
+        
+</head>
+<body>
+
+        <div id="mavi" class="kutu"></div>
+        <div id="kirmizi" class="kutu"></div>
+        <div id="sari" class="kutu"></div>
+
+        <input type="button" class="btn btn-primary" value="Mavi">
+
+        <input type="button" class="btn btn-primary" value="Kırmızı">
+
+        <input type="button" class="btn btn-primary" value="Sarı">
+
+        <input type="button" class="btn btn-primary" value="Göster">
+
+
+
+        <script>
+
+            var kutus = document.querySelectorAll('.kutu');
+            var btns=document.querySelectorAll('.btn');
+
+            console.log(btns);
+
+
+            btns[0].addEventListener('click',function()
+            {
+                kutus[0].style.display='none';
+            });
+
+            btns[1].addEventListener('click',function(){
+                kutus[1].style.display='none';
+            });
+            
+            btns[2].addEventListener('click',function(){
+                kutus[2].style.display='none';});
+            
+                btns[3].addEventListener('click',function(){
+
+                    kutus.forEach(function(kutu){
+                        kutu.style.display="block"
+                    });
+                });
+
+                
+        kutus.forEach(function(kutu){
+			
+			
+			kutu.addEventListener('click',function(){
+				
+				this.style.display='none';
+				
+			});
+			
+			
+		});
+        
+        </script>
+    
+</body>
+</html>

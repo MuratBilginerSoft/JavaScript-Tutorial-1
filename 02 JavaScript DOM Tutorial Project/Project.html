@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+    <div class="container mt-2">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <ul class="list-group">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    
+
+    var models =[
+
+    {
+        name:"Mazda",
+        selected:false
+    },
+
+    {
+        name:"Toyota",
+        selected:true
+    },
+
+    {
+        name:"Clio",
+        selected:false
+    },
+
+    {
+        name:"Volvo",
+        selected:true
+    },
+
+    {
+        name:"Mercedes",
+        selected:false
+    }
+
+    ];
+
+    var html2 = document.querySelector('.list-group');
+
+    models.forEach(function(model){
+
+        html2.innerHTML += '<li class="list-group-item">'+model.name+'</li>'
+    });
+
+    var list = document.querySelectorAll('.list-group-item');
+
+    var y=0;
+
+    models.forEach(function(model){
+
+        if(model.selected)
+        {
+            list[y].classList.add('active');
+        }
+
+        y++;
+
+    })
+
+    
+    </script>
+    
+</body>
+</html>

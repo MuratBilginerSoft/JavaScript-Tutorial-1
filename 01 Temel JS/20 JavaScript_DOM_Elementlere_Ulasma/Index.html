@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    .box{
+
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin:  10px;
+        border: 1px solid black;
+        
+    }
+
+    #red{
+        background-color: red;
+
+    }
+
+    #green{
+        background-color: green;
+    }
+
+    #blue{
+        background-color: blue;
+    }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="box" id="red"></div>
+
+    <div class="box" id="green"></div>
+
+    <div class="box" id="blue"></div>
+
+    <script>
+    
+    var IsColor=false;
+
+    var Blue = document.getElementById('blue');// Böylece id'si blue olan ilk nesneyi buldu ve bunu Blue değişkenimize atamış oldu.
+    //Bundan sonraki yapacağım işlemlerde Blue değişkeni üzerinden nesneye ulaşıp istediğim değişiklikleri yaptırabilirim.
+
+    setInterval(function(){
+      
+       if(IsColor == false)
+       {
+           Blue.style.backgroundColor='green';
+           IsColor=true;
+       }
+       
+       else
+       {
+           Blue.style.backgroundColor='blue';  
+           IsColor=false;
+       }
+
+        
+    },1000)
+
+
+    
+    
+    </script>
+    
+</body>
+</html>

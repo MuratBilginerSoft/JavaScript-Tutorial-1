@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      .active {
+
+        color:red;
+        font-size: 20px;
+        border: 1px solid blue;
+        padding: 10px;
+        
+
+      }
+
+      .kutu {
+        width: 120px;
+        height: 120px;
+        margin: 10px;
+        float: left;
+      }
+
+      #mavi {
+        background-color: blue;
+      }
+
+      #kirmizi {
+        background-color: red;
+      }
+
+      #sari {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="mavi" class="kutu"></div>
+
+    <div id="kirmizi" class="kutu"></div>
+
+    <div id="sari" class="kutu"></div>
+
+    <br>
+
+    <input id="Name" type="text" value="Murat" />
+
+    <br>
+
+
+    <h1 id="title">Lorem ipsum dolor sit amet.</h1>
+
+    <br>
+
+    <h3 id="sub-title">Lorem ipsum dolor sit amet.</h3>
+
+    <h3 id="sub-title2">Lorem ipsum dolor sit amet consectetur.</h3>
+
+    <br>
+
+    <img src="function.png" width="500px" />
+
+    <script>
+
+      var isblue =false;
+      var blue= document.getElementById('mavi');
+
+      setInterval(function() {
+
+          if(isblue)
+          {
+              blue.style.background='green';
+          }
+
+          else
+          {
+              blue.style.background='blue';
+          }
+
+          isblue =!isblue;
+
+      }, 1000);
+
+
+      var a = prompt('İsminizi Giriniz');
+
+      var x = document.getElementById('Name');
+
+      x.innerHTML=a;
+
+      document.getElementById('Name').value=a;
+
+
+
+      var title = document.getElementById('title');
+
+      title.style.backgroundColor="yellow";
+      title.style.fontSize="30px";
+      title.textContent=a;
+
+      title.classList.add('active'); 
+
+      title.classList.add('f45'); 
+
+      title.classList.remove('active'); 
+
+      title.classList.toggle('active'); // Classname ekli ise siler yoksa ekler.
+
+      var img2 = document.getElementsByTagName('img');
+
+      var sub = document.getElementsByTagName('h3');
+
+      console.log(sub);
+
+      sub[0].textContent ="Brainy";
+      sub[1].textContent=a;
+
+      sub[0].innerHTML ='<h2> Murat Bilginer</h2>';
+      
+    </script>
+  </body>
+</html>

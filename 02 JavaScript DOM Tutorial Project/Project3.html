@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="function.png"
+              alt=""
+              width="300px"
+              height="400px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">ABC</h5>
+              <a href="" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="function.png"
+              alt=""
+              width="300px"
+              height="400px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">ABC</h5>
+              <a href="" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="function.png"
+              alt=""
+              width="300px"
+              height="400px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">ABC</h5>
+              <a href="" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var Personals = [
+          {
+            Name: "Murat",
+            Lastname: "Bilginer",
+            Picture:
+              "https://cdn1.vectorstock.com/i/1000x1000/98/80/man-guy-boy-person-beard-face-head-icon-vector-10189880.jpg",
+            Status: 1
+          },
+
+          {
+            Name: "Meryem",
+            Lastname: "Yalvaç",
+            Picture:
+              "https://cdn1.iconfinder.com/data/icons/kids-cartoon/50/84-512.png",
+            Status: 1
+          },
+
+          {
+            Name: "Ferhat",
+            Lastname: "Bilginer",
+            Picture:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXeTjHEzWpQJUxrFaqbDY8UPRqImP7HcpZ2VSVHPsmlQhP9EZ1",
+            Status: 0
+          }
+        ];
+
+        var img = document.querySelectorAll(".card-img-top");
+        var name2 = document.querySelectorAll(".card-title");
+        var a = document.querySelectorAll("a");
+
+        setInterval(() => {
+          for (var i = 0; i < Personals.length; i++) {
+            var z = Math.floor(Math.random() * Personals.length);
+
+            img[i].setAttribute("src", Personals[z].Picture);
+            img[i].setAttribute('width','300px');
+            img[i].setAttribute('height','400px');
+
+            name2[i].textContent =
+              Personals[z].Name + " " + Personals[z].Lastname;
+            a[i].setAttribute("href", "Project3.html");
+
+            
+
+            
+          }
+        }, 1000);
+      </script>
+    </div>
+  </body>
+</html>

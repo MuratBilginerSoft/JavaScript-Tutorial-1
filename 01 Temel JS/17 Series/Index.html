@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+var marka=["x","y","z"];
+var model = new Array("x","y",2);
+var auris = ["x","y",3];
+
+console.log(marka[1]);
+console.log(model[2]);
+
+
+console.log(auris);
+
+auris.push("t"); // Sonuna Değer Ekler 
+auris.unshift("u"); // Başına Değer Ekler
+auris.pop(); // Dizinin Sonunda DEğer Sİler
+auris.shift(); // Dizinin En Başındaki Değeri Siler
+
+console.log(auris);
+
+for(var i=0; i<auris.length; i++)
+{
+    console.log(auris[i]);
+}
+
+if(marka.indexOf('Mazda')!=-1)
+{
+    console.log("Aradığınız Eleman Dizide Vardır.")
+
+}
+else
+{
+  console.log("Değer Yoktur.")
+}
+
+auris.forEach(function(element)
+{
+    console.log(element);
+});
+
+</script>
+
+</body>
+</html>

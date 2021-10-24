@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    .chk{
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #26a69a;
+        background-color:lawngreen;
+        z-index: 0;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <h1 id="header" > ToDo List App </h1>
+
+    <ul id="todolist">
+
+            <li id="i_8" class="todoitem">
+
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+            
+            </li>
+            
+            <li id="i_9" class="todoitem">
+            
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+               
+            </li>
+            
+            <li id="i_10" class="todoitem">
+            
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+                   
+            </li>
+            
+            <li id="i_11" class="todoitem">
+            
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+                       
+            </li>
+            
+            <li id="i_12" class="todoitem">
+            
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+                           
+            </li>
+            
+            <li id="i_13" class="todoitem">
+            
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+                               
+            </li>
+            
+            <li id="i_14" class="todoitem">
+            
+                 <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+                                   
+            </li>
+            
+            <li id="i_15" class="todoitem">
+            
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+                                       
+            </li>
+            
+            <li id="i_16" class="todoitem">
+            
+                <input type="checkbox" class="chk"><span>08.00 Uyanma</span> 
+                                           
+            </li>
+
+    </ul>
+    
+
+    
+    <script>
+    
+    var todo=document.getElementById('todolist');
+
+    todo.style.listStyleType='none';
+
+    /* var listitem = document.querySelectorAll('li');
+
+    listitem.forEach(function(item){
+
+item.style.textDecoration='line-through';
+    }); */
+
+    var date = new Date();
+
+    var hour = date.getHours();
+
+    var element;
+
+    for(var i=hour; i>=8; i--)
+    {
+        element = document.getElementById('i_'+i);
+        element.style.textDecoration ='line-through';
+        element.querySelector('input').checked=true;
+
+
+    }
+
+    </script>
+    
+</body>
+</html>
